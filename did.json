@@ -10,17 +10,18 @@
   ],
   "service": [
     {
-      "id": "did:web:vivek-bodar.github.io:debugHolder#didcomm-1",
-      "type": "DIDCommMessaging",
-      "serviceEndpoint": {
-          "uri": "http://localhost:9010",
-          "accept": [
-              "didcomm/v2",
-              "didcomm/aip2;env=rfc587"
-          ],
-          "routingKeys": ["did:web:vivek-bodar.github.io:debugHolder#key-1"]
-      }
-    }
+      "id": "did:web:vivek-bodar.github.io:debugHolder#did-communication",
+      "type": "did-communication",
+      "serviceEndpoint": "http://localhost:9040",
+      "priority": 1,
+      "accept": [
+          "didcomm/aip2;env=rfc19"
+      ],
+      "recipient_keys": [
+          "did:web:vivek-bodar.github.io:debugHolder#key-1"
+      ],
+      "routing_keys": []
+  }
   ],
   "verificationMethod": [
     {
